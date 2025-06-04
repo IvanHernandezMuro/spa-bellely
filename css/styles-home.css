@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+
+}
+
+html {
+	font-size: 16px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+
+	background-color: whitesmoke;
+	/*#dcbcd4*/
+}
+
+/** SIDE BAR **/
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem;
+	background-color: #ececec;
+}
+
+.logo {
+	max-width: 5rem;
+	max-height: 5rem;
+}
+
+.nav-list {
+	list-style-type: none;
+	display: flex;
+	gap: 2rem;
+}
+
+.nav-list li a {
+	text-decoration: none;
+	color: #1c1c1c;
+	font-size: 1rem;
+}
+
+.abrir-menu,
+.cerrar-menu {
+	display: none;
+
+}
+
+@media screen and (max-width: 720px) {
+
+	.abrir-menu,
+	.cerrar-menu {
+		display: block;
+		border: 0;
+		font-size: 1.5rem;
+		background-color: transparent;
+		cursor: pointer;
+
+	}
+
+	.abrir-menu {
+		color: #1c1c1c;
+
+	}
+
+	.cerrar-menu {
+		color: #ececec;
+	}
+
+	.nav {
+		opacity: 0;
+		visibility: hidden;
+
+		display: flex;
+		flex-direction: column;
+		align-items: end;
+		gap: 1rem;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		background-color: #1c1c1c;
+		padding: 2rem;
+		box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+	}
+
+	.nav.visible {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	.nav-list {
+		flex-direction: column;
+		align-items: end;
+	}
+
+	.nav-list li a {
+		color: #ecececec;
+	}
+}
+
+
+/**FIN Side Bar**/
+
+/* * header *
+.hero {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url(/img2/cover-removebg-preview.png);
+	background-position-x: right;
+	background-size: 80%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+/** Fin Hero**/
+
+/** Logo **/
+/* .logo {
+	top: 0;
+	left: 8%;
+	z-index: 1000;
+	position: absolute;
+}
+
+/** Loader **/
+/* .rs-loader {
+	top: 55%;
+	left: 12%;
+	z-index: 10000;
+	position: absolute;
+	font-family: "Abril Fatface", cursive;
+	font-size: 25px;
+	letter-spacing: 10px;
+	color: white;
+
+	animation-duration: 3s;
+	animation-name: slidein;
+}
+.rs-loader h2 {
+	text-align: right;
+}
+
+@keyframes slidein {
+	from {
+		margin-left: 100%;
+		width: 300%;
+	}
+
+	to {
+		margin-left: 0%;
+		width: 100%;
+	}
+} 
+/** Fin Loader**/
+
+.img-txt h1,
+h2 {
+	background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3DW3Tx5dbbO9PrhJjXlczAJdFbygBWT1ToI3iYZqs7DB0N5BW-QTFz2T1mFwsLt_vMYo&usqp=CAU);
+	color: transparent;
+	background-color: #000;
+
+	background-size: cover;
+	-webkit-background-clip: text;
+	background-clip: text;
+}
+
+/**secciones**/
+
+.container {
+	display: flex;
+	align-items: center;
+}
+
+.image {
+	flex: 1;
+	padding: 20px;
+}
+
+.article {
+	flex: 2;
+	padding: 20px;
+}
+
+.title {
+	text-align: center;
+}
